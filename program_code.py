@@ -23,6 +23,11 @@ if operation == operations[0]:
 elif operation == operations[1]:
     difference = num1 - num2
     print(f"{num1} - {num2} = {difference}")
+# for multiplication,
+elif operation == operations[2]:
+    product = num1 * num2
+    print(f"{num1} * {num2} = {product}")
+
 # ask user if there is more
 # if yes,
 # repeat process
