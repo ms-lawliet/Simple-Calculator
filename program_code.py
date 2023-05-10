@@ -9,13 +9,15 @@
 # 7. Use Python Function and appropriate Exceptions to capture errors during runtime.
 
 # ask user for operation
-operation = input("Enter operation to be used: ")
+operation = input("Enter operation to be used: ").lower()
 operations = ["addition", "subtraction", "multiplication", "division"]
 # ask user for two numbers
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
-
 # perform operation then display result
+if operation == operations[0]:
+    add = num1 + num2
+    print(f"{num1} + {num2} = {add}")
 # ask user if there is more
 # if yes,
 # repeat process
