@@ -46,6 +46,7 @@ while True:
 
             # ask user if there is more
             repeat = input(f"Do you want to try again? (yes or no) ").lower()
+            choices = ["yes", "no"]
             # if yes,
             # repeat process
             if repeat == "yes":
