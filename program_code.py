@@ -8,54 +8,58 @@
 # 6. If no, Display “Thank you!” and the program will exit
 # 7. Use Python Function and appropriate Exceptions to capture errors during runtime.
 
-while True:
-    # ask user for operation
-    operation = input("Enter operation to be used: ").lower()
-    operations = ["addition", "subtraction", "multiplication", "division"]
+def simple_calc():
+    while True:
+        # ask user for operation
+        operation = input("Enter operation to be used: ").lower()
+        operations = ["addition", "subtraction", "multiplication", "division"]
 
-    if operation not in operations:
-        raise Exception("Invalid operation.")
-    else:
-        # ask user for two numbers
-        try:
-            num1 = int(input("Enter first number: "))
-            num2 = int(input("Enter second number: "))
-        except ValueError:
-            print("Input is not an integer. Please try again.")
+        if operation not in operations:
+            raise Exception("Invalid operation.")
         else:
-            # perform operation then display result
-            # for addition,
-            if operation == operations[0]:
-                add = num1 + num2
-                print(f"{num1} + {num2} = {add}")
-            # for subtraction,
-            elif operation == operations[1]:
-                difference = num1 - num2
-                print(f"{num1} - {num2} = {difference}")
-            # for multiplication,
-            elif operation == operations[2]:
-                product = num1 * num2
-                print(f"{num1} * {num2} = {product}")
-            # for division
-            elif operation == operations[3]:
-                try:
-                    quotient = num1 / num2
-                    print(f"{num1} + {num2} = {quotient}")
-                except ZeroDivisionError:
-                    print(f"Division by Zero Error. Try again.")
-
-            # ask user if there are more
-            repeat = input(f"Do you want to try again? (yes or no) ").lower()
-            choices = ["yes", "no"]
-            if repeat not in choices:
-                raise Exception("Yes or no only.")
+            # ask user for two numbers
+            try:
+                num1 = int(input("Enter first number: "))
+                num2 = int(input("Enter second number: "))
+            except ValueError:
+                print("Input is not an integer. Please try again.")
             else:
-                # if yes,
-                # repeat process
-                if repeat == "yes":
-                    continue
-                # if no,
-                # display "Thank and you" and exit
+                # perform operation then display result
+                # for addition,
+                if operation == operations[0]:
+                    add = num1 + num2
+                    print(f"{num1} + {num2} = {add}")
+                # for subtraction,
+                elif operation == operations[1]:
+                    difference = num1 - num2
+                    print(f"{num1} - {num2} = {difference}")
+                # for multiplication,
+                elif operation == operations[2]:
+                    product = num1 * num2
+                    print(f"{num1} * {num2} = {product}")
+                # for division
+                elif operation == operations[3]:
+                    try:
+                        quotient = num1 / num2
+                        print(f"{num1} + {num2} = {quotient}")
+                    except ZeroDivisionError:
+                        print(f"Division by Zero Error. Try again.")
+
+                # ask user if there are more
+                repeat = input(f"Do you want to try again? (yes or no) ").lower()
+                choices = ["yes", "no"]
+                if repeat not in choices:
+                    raise Exception("Yes or no only.")
                 else:
-                    print(f"Thank you! ")
-                    break
+                    # if yes,
+                    # repeat process
+                    if repeat == "yes":
+                        continue
+                    # if no,
+                    # display "Thank and you" and exit
+                    else:
+                        print(f"Thank you! ")
+                        break
+
+
+simple_calc()
