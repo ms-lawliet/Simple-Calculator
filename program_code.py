@@ -22,6 +22,13 @@ yellow = '\033[93m'
 magenta = '\033[95m'
 gray = "\033[37m"
 
+# print program title
+print(f"{yellow}+-*/"*185)
+print(Back.BLACK + pyfiglet.figlet_format('Simple Calculator', font='lean', width=185, justify='center'),
+      end='')
+print(Back.RESET + f"{yellow}+-*/"*185)
+time.sleep(0.5)
+
 
 def simple_calc():
     while True:
