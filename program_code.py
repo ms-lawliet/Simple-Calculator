@@ -12,39 +12,43 @@ while True:
     # ask user for operation
     operation = input("Enter operation to be used: ").lower()
     operations = ["addition", "subtraction", "multiplication", "division"]
-    
+
     if operation not in operations:
         raise Exception("Invalid operation.")
     else:
         # ask user for two numbers
-        num1 = int(input("Enter first number: "))
-        num2 = int(input("Enter second number: "))
-        # perform operation then display result
-        # for addition,
-        if operation == operations[0]:
-            add = num1 + num2
-            print(f"{num1} + {num2} = {add}")
-        # for subtraction,
-        elif operation == operations[1]:
-            difference = num1 - num2
-            print(f"{num1} - {num2} = {difference}")
-        # for multiplication,
-        elif operation == operations[2]:
-            product = num1 * num2
-            print(f"{num1} * {num2} = {product}")
-        # for division
-        elif operation == operations[3]:
-            quotient = num1 / num2
-            print(f"{num1} + {num2} = {quotient}")
-
-        # ask user if there is more
-        repeat = input(f"Do you want to try again? (yes or no) ").lower()
-        # if yes,
-        # repeat process
-        if repeat == "yes":
-            continue
-        # if no,
-        # display "Thank and you" and exit
+        try:
+            num1 = int(input("Enter first number: "))
+            num2 = int(input("Enter second number: "))
+        except ValueError:
+            print("Input is not an integer. Please try again.")
         else:
-            print(f"Thank you! ")
-            break
+            # perform operation then display result
+            # for addition,
+            if operation == operations[0]:
+                add = num1 + num2
+                print(f"{num1} + {num2} = {add}")
+            # for subtraction,
+            elif operation == operations[1]:
+                difference = num1 - num2
+                print(f"{num1} - {num2} = {difference}")
+            # for multiplication,
+            elif operation == operations[2]:
+                product = num1 * num2
+                print(f"{num1} * {num2} = {product}")
+            # for division
+            elif operation == operations[3]:
+                quotient = num1 / num2
+                print(f"{num1} + {num2} = {quotient}")
+
+            # ask user if there is more
+            repeat = input(f"Do you want to try again? (yes or no) ").lower()
+            # if yes,
+            # repeat process
+            if repeat == "yes":
+                continue
+            # if no,
+            # display "Thank and you" and exit
+            else:
+                print(f"Thank you! ")
+                break
