@@ -38,8 +38,11 @@ while True:
                 print(f"{num1} * {num2} = {product}")
             # for division
             elif operation == operations[3]:
-                quotient = num1 / num2
-                print(f"{num1} + {num2} = {quotient}")
+                try:
+                    quotient = num1 / num2
+                    print(f"{num1} + {num2} = {quotient}")
+                except ZeroDivisionError:
+                    print(f"Division by Zero Error. Try again.")
 
             # ask user if there is more
             repeat = input(f"Do you want to try again? (yes or no) ").lower()
