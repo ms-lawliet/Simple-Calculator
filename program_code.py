@@ -7,3 +7,12 @@
 # 5. If yes, repeat Step 1.
 # 6. If no, Display “Thank you!” and the program will exit
 # 7. Use Python Function and appropriate Exceptions to capture errors during runtime.
+
+# ask user for operation
+# ask user for two numbers
+# perform operation then display result
+# ask user if there is more
+# if yes,
+# repeat process
+# if no,
+# display "Thank and you" and exit
