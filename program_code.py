@@ -9,6 +9,7 @@
 # 7. Use Python Function and appropriate Exceptions to capture errors during runtime.
 
 # ask user for operation
+operation = input("Enter operation to be used: ")
 # ask user for two numbers
 # perform operation then display result
 # ask user if there is more
