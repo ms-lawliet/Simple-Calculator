@@ -33,7 +33,7 @@ time.sleep(0.5)
 def simple_calc():
     while True:
         # ask user for operation
-        operation = input("Enter operation to be used: ").lower()
+        operation = input(Back.BLACK + f"{red}Enter operation to be used: ").lower()
         operations = ["addition", "subtraction", "multiplication", "division"]
 
         if operation not in operations:
@@ -41,34 +41,34 @@ def simple_calc():
         else:
             # ask user for two numbers
             try:
-                num1 = int(input("Enter first number: "))
-                num2 = int(input("Enter second number: "))
+                num1 = int(input(Back.BLACK + f"{green}Enter first number: "))
+                num2 = int(input(Back.BLACK + f"{green}Enter second number: "))
             except ValueError:
-                print("Input is not an integer. Please try again.")
+                print(Back.RESET + f"{red}Input is not an integer. Please try again.")
             else:
                 # perform operation then display result
                 # for addition,
                 if operation == operations[0]:
                     add = num1 + num2
-                    print(f"{num1} + {num2} = {add}")
+                    print(Back.RESET + f"{magenta}{num1} + {num2} = {add}")
                 # for subtraction,
                 elif operation == operations[1]:
                     difference = num1 - num2
-                    print(f"{num1} - {num2} = {difference}")
+                    print(Back.RESET + f"{blue}{num1} - {num2} = {difference}")
                 # for multiplication,
                 elif operation == operations[2]:
                     product = num1 * num2
-                    print(f"{num1} * {num2} = {product}")
+                    print(Back.RESET + f"{cyan}{num1} * {num2} = {product}")
                 # for division
                 elif operation == operations[3]:
                     try:
                         quotient = num1 / num2
-                        print(f"{num1} + {num2} = {quotient}")
+                        print(Back.RESET + f"{gray}{num1} + {num2} = {quotient}")
                     except ZeroDivisionError:
-                        print(f"Division by Zero Error. Try again.")
+                        print(Back.RESET + f"{red}Division by Zero Error. Try again.")
 
                 # ask user if there are more
-                repeat = input(f"Do you want to try again? (yes or no) ").lower()
+                repeat = input(Back.BLACK + f"{yellow}Do you want to try again? (yes or no) ").lower()
                 choices = ["yes", "no"]
                 if repeat not in choices:
                     raise Exception("Yes or no only.")
@@ -80,7 +80,7 @@ def simple_calc():
                     # if no,
                     # display "Thank and you" and exit
                     else:
-                        print(f"Thank you! ")
+                        print(Back.RESET + f"{white}Thank you! ")
                         break
 
 
