@@ -1,4 +1,6 @@
-# Simple-Calculator
+<p align="center">
+  <img width="2500" src="https://github.com/ms-lawliet/Simple-Calculator/assets/129574658/bcc629e6-5674-473c-bb6b-bc8022f00422"
+</p>
 
 ## *About the Program*
 
