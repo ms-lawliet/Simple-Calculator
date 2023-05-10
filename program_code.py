@@ -15,9 +15,14 @@ operations = ["addition", "subtraction", "multiplication", "division"]
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
 # perform operation then display result
+# for addition,
 if operation == operations[0]:
     add = num1 + num2
     print(f"{num1} + {num2} = {add}")
+# for subtraction,
+elif operation == operations[1]:
+    difference = num1 - num2
+    print(f"{num1} - {num2} = {difference}")
 # ask user if there is more
 # if yes,
 # repeat process
