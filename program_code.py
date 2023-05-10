@@ -44,15 +44,18 @@ while True:
                 except ZeroDivisionError:
                     print(f"Division by Zero Error. Try again.")
 
-            # ask user if there is more
+            # ask user if there are more
             repeat = input(f"Do you want to try again? (yes or no) ").lower()
             choices = ["yes", "no"]
-            # if yes,
-            # repeat process
-            if repeat == "yes":
-                continue
-            # if no,
-            # display "Thank and you" and exit
+            if repeat not in choices:
+                raise Exception("Yes or no only.")
             else:
-                print(f"Thank you! ")
-                break
+                # if yes,
+                # repeat process
+                if repeat == "yes":
+                    continue
+                # if no,
+                # display "Thank and you" and exit
+                else:
+                    print(f"Thank you! ")
+                    break
