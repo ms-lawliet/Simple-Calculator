@@ -27,6 +27,10 @@ elif operation == operations[1]:
 elif operation == operations[2]:
     product = num1 * num2
     print(f"{num1} * {num2} = {product}")
+# for division
+elif operation == operations[3]:
+    quotient = num1 / num2
+    print(f"{num1} + {num2} = {quotient}")
 
 # ask user if there is more
 # if yes,
