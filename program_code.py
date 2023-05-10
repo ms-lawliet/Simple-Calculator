@@ -12,6 +12,16 @@ import pyfiglet
 import time
 from colorama import Back
 
+# create list of colors for font
+red = '\033[91m'
+green = '\033[92m'
+blue = '\033[94m'
+cyan = '\033[96m'
+white = '\033[97m'
+yellow = '\033[93m'
+magenta = '\033[95m'
+gray = "\033[37m"
+
 
 def simple_calc():
     while True:
