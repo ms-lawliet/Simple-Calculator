@@ -8,6 +8,11 @@
 # 6. If no, Display “Thank you!” and the program will exit
 # 7. Use Python Function and appropriate Exceptions to capture errors during runtime.
 
+import pyfiglet
+import time
+from colorama import Back
+
+
 def simple_calc():
     while True:
         # ask user for operation
