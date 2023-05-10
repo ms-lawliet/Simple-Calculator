@@ -11,6 +11,9 @@
 # ask user for operation
 operation = input("Enter operation to be used: ")
 # ask user for two numbers
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
 # perform operation then display result
 # ask user if there is more
 # if yes,
